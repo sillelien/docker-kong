@@ -12,5 +12,5 @@ Just click the button and go:
 
 [![GitHub Issues](https://img.shields.io/github/issues/neilellis/my-kong.svg)](https://github.com/neilellis/my-kong/issues)
     
-[![GitHub Release](https://img.shields.io/github/neilellis/my-kong.svg)](https://github.com/neilellis/my-kong)
+[![GitHub Release](https://img.shields.io/github/release/neilellis/my-kong.svg)](https://github.com/neilellis/my-kong)
 
