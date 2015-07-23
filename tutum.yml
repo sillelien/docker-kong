@@ -1,0 +1,14 @@
+cass:
+  image: cassandra
+  ports:
+    - 9042
+
+
+kong:
+  image: neilellis/my-kong
+  ports:
+    - 8000:8000
+    - 8001:8001
+  links:
+    - cass:cassandra
+
