@@ -1,9 +1,12 @@
+#Cassandra is memory hungry make sure it goes on a high memory machine (I guess 2Gb +)
 cass:
   image: cassandra
+  #Keep the ports mapped to a specified port not a dynamic one, this is needed by kong
   ports:
-    - "9042"
+    - "9042:9042"
 
 
+#Edit the port mapping of course to what you need
 kong:
   image: neilellis/my-kong
   ports:
