@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 envsubst '$CASSANDRA_PORT_9042_TCP_ADDR:$CASSANDRA_PORT_9042_TCP_PORT' < /kong.yml > /etc/kong/kong.yml
-while ! ping $CASSANDRA_PORT_9042_TCP_ADDR
+
+while ! ping -c 1 $CASSANDRA_PORT_9042_TCP_ADDR
 do
     sleep 5
 done
