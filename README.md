@@ -2,6 +2,7 @@ Just click the button and go:
 
 [![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)
 
+Please use `FROM sillelien/docker-kong` now instead of `FROM neilellis/my-kong`
 
 ---
 
