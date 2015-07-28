@@ -8,7 +8,7 @@ cass:
 
 #Edit the port mapping of course to what you need
 kong:
-  image: neilellis/my-kong
+  image: sillelien/docker-kong
   ports:
     - "8000:8000"
     - "8001:8001"
