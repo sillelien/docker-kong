@@ -6,12 +6,12 @@ Please use `FROM sillelien/docker-kong` now instead of `FROM neilellis/my-kong`
 
 ---
 
-[![Docker Registry](https://img.shields.io/docker/pulls/neilellis/my-kong.svg)](https://registry.hub.docker.com/u/neilellis/my-kong)
-[![Image Layers](https://badge.imagelayers.io/neilellis/my-kong.svg)](https://imagelayers.io/?images=neilellis/my-kong:latest 'Get your own badge on imagelayers.io') 
+[![Docker Registry](https://img.shields.io/docker/pulls/sillelien/docker-kong.svg)](https://registry.hub.docker.com/u/sillelien/docker-kong)
+[![Image Layers](https://badge.imagelayers.io/sillelien/docker-kong.svg)](https://imagelayers.io/?images=sillelien/docker-kong:latest 'Get your own badge on imagelayers.io') 
 
-[![GitHub License](https://img.shields.io/github/license/neilellis/my-kong.svg)](https://raw.githubusercontent.com/neilellis/my-kong/master/LICENSE)
+[![GitHub License](https://img.shields.io/github/license/sillelien/docker-kong.svg)](https://raw.githubusercontent.com/sillelien/docker-kong/master/LICENSE)
 
-[![GitHub Issues](https://img.shields.io/github/issues/neilellis/my-kong.svg)](https://github.com/neilellis/my-kong/issues)
+[![GitHub Issues](https://img.shields.io/github/issues/sillelien/docker-kong.svg)](https://github.com/sillelien/docker-kong/issues)
     
-[![GitHub Release](https://img.shields.io/github/release/neilellis/my-kong.svg)](https://github.com/neilellis/my-kong)
+[![GitHub Release](https://img.shields.io/github/release/sillelien/docker-kong.svg)](https://github.com/sillelien/docker-kong)
 
