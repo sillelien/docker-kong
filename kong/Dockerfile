@@ -1,4 +1,4 @@
-FROM debian:wheezy
+FROM debian:jessie
 COPY build.sh /build.sh
 RUN chmod +x /build.sh
 RUN /build.sh
