@@ -1,4 +1,5 @@
 FROM sillelien/jessy:0.3
+RUN apt-get install -y bash
 COPY build.sh /build.sh
 RUN chmod a+x /build.sh
 RUN /build.sh
