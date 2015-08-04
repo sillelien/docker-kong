@@ -7,10 +7,14 @@ dependencies:
     - "~/docker"
 
   override:
+      - pip install docker-compose
       - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-      - cd kong && docker build -t sillelien/docker-kong:${CIRCLE_BRANCH} .
-deployment:
 
+test:
+  override:
+    - docker-compose build && docker-compose up
+
+deployment:
   staging:
       branch: staging
       commands:
