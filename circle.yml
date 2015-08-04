@@ -39,7 +39,7 @@ deployment:
   production:
       branch: master
       commands:
-          - cd kong && docker build -t sillelien/docker-kong:${release} .
+          - cd kong && docker build -t sillelien/docker-kong:$(cat .release) .
           - docker push sillelien/docker-kong:${release}
           - cd kong && docker build -t sillelien/docker-kong .
           - docker push sillelien/docker-kong
