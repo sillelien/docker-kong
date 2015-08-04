@@ -34,12 +34,12 @@ deployment:
   production:
       branch: master
       commands:
-          - cd builder && docker build -t sillelien/docker-kong .
+          - cd kong && docker build -t sillelien/docker-kong .
           - docker push sillelien/docker-kong
 
 
   development:
       branch: dev
       commands:
-          - cd builder && docker build -t sillelien/docker-kong:dev .
+          - cd kong && docker build -t sillelien/docker-kong:dev .
           - docker push sillelien/docker-kong:dev
