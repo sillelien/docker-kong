@@ -1,0 +1,39 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  cache_directories:
+    - "~/docker"
+
+  override:
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - cd kong && docker build -t sillelien/docker-kong:${CIRCLE_BRANCH} .
+deployment:
+
+  staging:
+      branch: staging
+      commands:
+        - git config --global user.email "hello@neilellis.me"
+        - git config --global user.name "Neil Ellis"
+        - git reset HEAD --hard
+        - git clean -fd
+        - git checkout master
+        - git pull
+        - git merge staging -m "Auto merge"
+        - git push
+        - 'git commit -a -m "Promotion from staging" || :'
+        - "git tag ${release} || :"
+        - git push --tags
+        - git push origin master
+
+  production:
+      branch: master
+      commands:
+          - docker push sillelien/docker-kong:${CIRCLE_BRANCH}
+
+
+  development:
+      branch: dev
+      commands:
+        - docker push sillelien/docker-kong:${CIRCLE_BRANCH}

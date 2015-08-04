@@ -12,3 +12,7 @@ kong:
   links:
     - cass:cassandra
 
+test:
+  build: test
+  links:
+    - kong
