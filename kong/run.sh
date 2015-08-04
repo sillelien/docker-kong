@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 envsubst '$CASSANDRA_PORT_9042_TCP_ADDR:$CASSANDRA_PORT_9042_TCP_PORT' < /kong.yml > /etc/kong/kong.yml
 
