@@ -7,7 +7,7 @@ dependencies:
     - "~/docker"
 
   override:
-      - sudo pip install docker-compose
+      - sudo -H pip install docker-compose
       - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
 
 test:
