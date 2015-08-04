@@ -1,4 +1,4 @@
-FROM sillelien/jessy:0.2
+FROM sillelien/jessy:0.3
 COPY build.sh /build.sh
 RUN chmod +x /build.sh
 RUN /build.sh
