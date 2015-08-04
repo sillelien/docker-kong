@@ -34,10 +34,11 @@ deployment:
   production:
       branch: master
       commands:
-          - docker push sillelien/docker-kong:${CIRCLE_BRANCH}
+          - docker push sillelien/docker-kong
+          - cd builder && docker build -t sillelien/docker-kong .
 
 
   development:
       branch: dev
       commands:
-        - docker push sillelien/docker-kong:${CIRCLE_BRANCH}
+          - cd builder && docker build -t sillelien/docker-kong:dev .
