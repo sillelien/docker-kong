@@ -1,6 +1,8 @@
 machine:
   services:
     - docker
+  environment:
+    release: 0.4.${CIRCLE_BUILD_NUM}
 
 dependencies:
   cache_directories:
@@ -18,7 +20,7 @@ deployment:
   staging:
       branch: staging
       commands:
-        - git config --global user.email "hello@neilellis.me"
+     - git config --global user.email "hello@neilellis.me"
         - git config --global user.name "Neil Ellis"
         - git reset HEAD --hard
         - git clean -fd
@@ -26,6 +28,9 @@ deployment:
         - git pull
         - git merge staging -m "Auto merge"
         - git push
+        - echo ${release} > .release
+        - envsubst < README.md > README.expanded
+        - mv README.expanded README.md
         - 'git commit -a -m "Promotion from staging" || :'
         - "git tag ${release} || :"
         - git push --tags
@@ -34,6 +39,8 @@ deployment:
   production:
       branch: master
       commands:
+          - cd kong && docker build -t sillelien/docker-kong:${release} .
+          - docker push sillelien/docker-kong:${release}
           - cd kong && docker build -t sillelien/docker-kong .
           - docker push sillelien/docker-kong
 
