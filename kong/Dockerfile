@@ -1,6 +1,6 @@
 FROM sillelien/jessy:0.3
 COPY build.sh /build.sh
-RUN chmod +x /build.sh
+RUN chmod a+x /build.sh
 RUN /build.sh
 COPY kong.yml /kong.yml
 COPY run.sh /run.sh
